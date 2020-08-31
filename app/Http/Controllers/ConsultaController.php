@@ -23,7 +23,7 @@ class ConsultaController extends Controller
         //$model = Consulta::orderBy('id','DESC')->paginate(3);
         $model = DB::table('consultas as c')
                     ->select('c.id', 'p.ci', 'p.nombres', 'p.apellidos', 'e.nombre as estado', 
-                            'c.descripcion', 'c.fecha')
+                            'c.fecha')
                     ->join('paciente as p', 'c.idpaciente', '=', 'p.id')
                     ->join('estado as e', 'c.idestado', '=', 'e.id')
                     ->paginate(5);
@@ -31,6 +31,19 @@ class ConsultaController extends Controller
         $model->accion = 'consulta';
 
         return view('consulta.index', compact('model')); 
+    }
+
+    public function historial()
+    {
+        $model = new Consulta;
+        $consultaServicio = null;
+
+        $model->accion = 'consulta';
+        $model->scenario = 'historial';
+
+        return view('consulta.historial')
+                ->with('model', $model)
+                ->with('consultaServicio', $consultaServicio);
     }
 
     public function create()

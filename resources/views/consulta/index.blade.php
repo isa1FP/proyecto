@@ -25,8 +25,7 @@
                       <th>Nombre</th>
                       <th>Apellido</th>
                       <th>Estado</th>
-                      <th>Precio</th>
-                      <th>Descripcion</th>
+                      <th>Historial</th>
                       <th class="sorting_desc_disabled sorting_asc_disabled text-right">Actions</th>
                     </tr>
                   </thead>
@@ -37,8 +36,9 @@
                       <td class="text-left">{{$dato->nombres}}</td>
                       <td class="text-left">{{$dato->apellidos}}</td>
                       <td class="text-left">{{$dato->estado}}</td>
-                      <td>Descripcion</td>
-                      <td>Descripcion</td>
+                      <td class="text-left">
+                        <a href="" class="btn btn-info" >Historial Clínico</a>
+                      </td>
                       <td class="text-right">
                         {{-- <a href="javascript:void(0)" class="btn btn-link btn-info btn-icon btn-sm like"><i class="tim-icons icon-heart-2"></i></a>
                         <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i class="tim-icons icon-pencil"></i></a> --}}

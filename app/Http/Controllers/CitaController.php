@@ -18,8 +18,7 @@ class CitaController extends Controller
     public function index()
     {
         //$model = Consulta::orderBy('id','DESC')->paginate(3);
-select p.ci, p.nombres, p.apellidos, p.telefono, p.celular, p.direccion, h.hora
-from paciente p inner join hora h on p.id=h.id
+    /*select p.ci, p.nombres, p.apellidos, p.telefono, p.celular, p.direccion, h.hora from paciente p inner join hora h on p.id=h.id*/
 
         $model = DB::table('paciente as p')
                     ->select('p.id', 'p.ci', 'p.nombres', 'p.apellidos', 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Paciente;
+
 class HomeController extends Controller
 {
     /**
@@ -24,6 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         // return view('blackDashboardPro.app');
-        return view('home');
+        $model = Paciente::orderBy('id','DESC')->paginate(3);
+        $model->accion = 'MisPacientes';
+        return view('home', compact('model'));
     }
 }

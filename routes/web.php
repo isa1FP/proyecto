@@ -34,6 +34,8 @@ Route::post('consulta/{id}/buscarPaciente', ['as' => 'buscarPaciente', 'uses' =>
 Route::post('consulta/buscarServicio', ['as' => 'buscarServicio', 'uses' => 'ConsultaController@buscarServicio']);
 Route::post('consulta/{id}/buscarServicio', ['as' => 'buscarServicio', 'uses' => 'ConsultaController@buscarServicio']);
 
+Route::post('consulta/historial', ['as' => 'historial', 'uses' => 'ConsultaController@historial']);
+
 
 
 Route::resource('cita','CitaController');

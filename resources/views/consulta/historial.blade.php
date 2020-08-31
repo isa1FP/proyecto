@@ -1,0 +1,1 @@
+<h2>Historial del paciente</h2>

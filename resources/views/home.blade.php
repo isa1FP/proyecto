@@ -1,5 +1,6 @@
 @extends('blackDashboardPro.app')
 
+
 @section('contentPrincipal')
 {{-- <div class="card">
   <div class="card-header">
